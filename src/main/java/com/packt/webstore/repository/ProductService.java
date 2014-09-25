@@ -9,6 +9,7 @@ public interface ProductService {
 
 	public List<Product> getListOfAllProducts();
 	public Product getProductById(String id);
+	public void addProduct(Product product);
 
 	
 }

@@ -3,6 +3,7 @@ package com.packt.webstore.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -31,5 +32,20 @@ public String getProduct(Model model, @PathVariable (value="id")String productId
 	model.addAttribute("product", productService.getProductById(productId));
 	return "product";
 }
-	
+
+@RequestMapping(value= "/add", method = RequestMethod.GET)
+public String getProductForm(Model model)
+{
+	Product theProduct = new Product();
+	model.addAttribute("theProduct", theProduct);	
+	return "productform";
+}
+
+@RequestMapping(value= "/add", method = RequestMethod.POST)
+public String processProductForm(Model model, @ModelAttribute (value = "theProduct") Product product)
+{
+	productService.addProduct(product);
+	return "redirect:/products";
+}
+
 }

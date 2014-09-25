@@ -47,4 +47,9 @@ public class ProductRepositoryImplementation implements ProductService{
 		return theProduct;
 	}
 	
+	public void addProduct(Product product)
+	{
+		listOfProducts.add(product);
+	}
+	
 }
