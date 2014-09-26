@@ -1,5 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"  %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
 
 <html>
 <head>
@@ -22,37 +24,44 @@
         <legend>Add new product</legend>
 
         <div class="form-group">
-          <label class="control-label col-lg-2 col-lg-2" for="productId">Product Id</label>
+          <label class="control-label col-lg-2 col-lg-2" for="productId"><spring:message code="ProductId.label"></spring:message></label>
           <div class="col-lg-10">
             <form:input id="productId" path="productId" type="text" class="form:input-large"/>
           </div>
         </div>
  
         <div class="form-group">
-          <label class="control-label col-lg-2 col-lg-2" for="name">Product Name</label>
+          <label class="control-label col-lg-2 col-lg-2" for="name"><spring:message code="ProductName.label"></spring:message></label>
           <div class="col-lg-10">
             <form:input id="name" path="name" type="text" class="form:input-large"/>
           </div>
         </div> 
         
         <div class="form-group">
-          <label class="control-label col-lg-2 col-lg-2" for="unitPrice">Product Price</label>
+          <label class="control-label col-lg-2 col-lg-2" for="unitPrice"><spring:message code="ProductPrice.label"></spring:message></label>
           <div class="col-lg-10">
             <form:input id="unitPrice" path="unitPrice" type="text" class="form:input-large"/>
           </div>
         </div>
  
          <div class="form-group">
-          <label class="control-label col-lg-2 col-lg-2" for="manufacturer">Product Manufacturer</label>
+          <label class="control-label col-lg-2 col-lg-2" for="manufacturer"><spring:message code="Product.Manufacturer.label"></spring:message></label>
           <div class="col-lg-10">
             <form:input id="manufacturer" path="manufacturer" type="text" class="form:input-large"/>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="control-label col-lg-2 col-lg-2" for="category">Product Category</label>
+          <label class="control-label col-lg-2 col-lg-2" for="category"><spring:message code="ProductCategory.label"></spring:message></label>
           <div class="col-lg-10">
             <form:input id="category" path="category" type="text" class="form:input-large"/>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="control-label col-lg-2 col-lg-2" for="productCode">Code</label>
+          <div class="col-lg-10">
+            <form:input id="productCode" path="productCode" type="text" class="form:input-large"/>
           </div>
         </div>                              
 

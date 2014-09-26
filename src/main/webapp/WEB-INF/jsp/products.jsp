@@ -28,6 +28,7 @@
                 <p>$${product.unitPrice}</p>
                 <p>${product.category}</p>
                 <p>${product.manufacturer}</p>
+                <p>${product.productCode}</p>
               </div>
             </div>
           </div>

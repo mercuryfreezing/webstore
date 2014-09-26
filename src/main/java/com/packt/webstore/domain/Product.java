@@ -8,11 +8,45 @@ public class Product {
 	private BigDecimal unitPrice;
 	private String manufacturer;
 	private String category;
+	private int currentStock; //Not provided by person adding product. Populated automatically
+	private String country; //Not provided by person adding product. Populated automatically
+	
+	private ProductCode productCode;
 	
 	
 	public Product()
 	{
 		
+	}
+	
+	public ProductCode getProductCode()
+	{
+		return productCode;
+	}
+	
+	public void setProductCode(ProductCode pc)
+	{
+		productCode = pc;
+	}
+	
+	public String getCountry()
+	{
+		return country;
+	}
+	
+	public void setCountry(String coun)
+	{
+		this.country = coun;
+	}
+	
+	public void setUnitsInOrder(int st)
+	{
+		this.currentStock = st;
+	}
+	
+	public int getCurrentStock()
+	{
+		return currentStock;
 	}
 	
 	public Product (String id, String name, BigDecimal up, String man, String cat)

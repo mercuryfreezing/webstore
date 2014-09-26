@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.packt.webstore.domain.Product;
+import com.packt.webstore.domain.ProductCode;
 
 @Repository
 public class ProductRepositoryImplementation implements ProductService{
@@ -50,6 +51,20 @@ public class ProductRepositoryImplementation implements ProductService{
 	public void addProduct(Product product)
 	{
 		listOfProducts.add(product);
+	}
+	
+	public Product getProductByCode(ProductCode productCode)
+	{
+		Product theProduct = new Product();
+		for(Product eachProduct: listOfProducts)
+		{
+			if(eachProduct.getProductCode().getProductCode().equalsIgnoreCase(productCode.getProductCode()))
+			{
+				theProduct = eachProduct;
+			}
+		}
+		
+		return theProduct;
 	}
 	
 }
