@@ -13,13 +13,20 @@
         <div class="container">
           <h1>Products</h1>
           <p>Product</p>
+          
+		 <div class="col-md-5">
+		  <img src="<c:url value="/resource/images/${product.productId}.png"></c:url>" alt="image"  style = "width:100%"/>
+		</div>
           <h3>${product.name}</h3>
                 <p>${product.productId}</p>
                 <p>$${product.unitPrice}</p>
                 <p>${product.category}</p>
                 <p>${product.manufacturer}</p>
+                <p>
+                	<a href="<c:url value="/products"></c:url>">Back</a>
+                </p>
         </div>
-      </div>
+      </div>     
     </section>
   </body>
 </html>
